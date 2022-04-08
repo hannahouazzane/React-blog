@@ -14,3 +14,43 @@ a {
 * {
   box-sizing: border-box;
 }
+ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+  margin: 0 2vw;
+}
+
+nav {
+  background-color: white;
+  color: rgb(16, 116, 143);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-left: auto;
+}
+
+header {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2 {
+  color: rgb(16, 116, 143);
+  text-align: center;
+  font-weight: normal;
+}
+h3 {
+  color: rgb(16, 116, 143);
+  text-align: center;
+  font-weight: normal;
+  margin: 0 0 1rem 0;
+}
