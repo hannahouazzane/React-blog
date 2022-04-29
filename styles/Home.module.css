@@ -76,7 +76,6 @@ div.firstName {
 
 .heroImage {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: url("/images/weekly_quote.png");
 
   /* Set a specific height */
   max-width: 1024px;

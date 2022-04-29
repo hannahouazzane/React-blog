@@ -1,5 +1,6 @@
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
+import Article from "./components/Article.js";
 
 export const Home = () => {
   return (
@@ -9,7 +10,7 @@ export const Home = () => {
           <a href="index.html">
             <img
               className={styles.logo}
-              src="logo.jpg"
+              src="images/logo.png"
               height="100px"
               width="100px"
               alt="Incrementum logo"
@@ -37,7 +38,7 @@ export const Home = () => {
         <div className={styles.heroImage}>
           <img
             className={styles.week_quote}
-            src="weekly_quote.png"
+            src="images/weekly_quote.png"
             height="500px"
             width="1000px"
           />
@@ -46,93 +47,51 @@ export const Home = () => {
 
         <h2>Recent Blog Posts</h2>
         <section className={styles.catalogue}>
-          <Link href="/articles/athens">
-            <div>
-              <h3>Morality & Empathy: What we can learn from Aristotle</h3>
-              <img src="Stoicism.png" className={styles.articleImage} />
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-                id lectus felis. Pellentesque efficitur pharetra sagittis
-              </p>
-            </div>
-          </Link>
-          <article>
-            <h3>Yin & Yang - finding balance</h3>
-            <img src="Stoicism.png" className={styles.articleImage} />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id
-              lectus felis. Pellentesque efficitur pharetra sagittis
-            </p>
-          </article>
+          <Article
+            title="Morality & Empathy: What we can learn from Aristotle"
+            src="images/Stoicism.png"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+              id lectus felis. Pellentesque efficitur pharetra sagittis"
+          />
 
-          <article>
-            <h3>Stoicism & The Art of Courage</h3>
-            <img src="Stoicism.png" className={styles.articleImage} />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id
-              lectus felis. Pellentesque efficitur pharetra sagittis
-            </p>
-          </article>
+          <Article
+            title="Yin & Yang - finding balance"
+            src="images/Stoicism.png"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+              id lectus felis. Pellentesque efficitur pharetra sagittis"
+          />
+
+          <Article
+            title="Stoicism & The Art of Courage"
+            src="images/Stoicism.png"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+              id lectus felis. Pellentesque efficitur pharetra sagittis"
+          />
         </section>
 
         <h2>Latest Videos</h2>
 
         <section className={styles.catalogue}>
-          <article>
-            <h3>Title</h3>
-            <img src="Stoicism.png" className={styles.articleImage} />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id
-              lectus felis. Pellentesque efficitur pharetra sagittis
-            </p>
-          </article>
-          <article>
-            <h3>Title</h3>
-            <img src="Stoicism.png" className={styles.articleImage} />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id
-              lectus felis. Pellentesque efficitur pharetra sagittis
-            </p>
-          </article>
-          <article>
-            {" "}
-            <h3>Title</h3>
-            <img src="Stoicism.png" className={styles.articleImage} />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id
-              lectus felis. Pellentesque efficitur pharetra sagittis
-            </p>
-          </article>
-        </section>
-        <br />
-        <h2>Helpful Resources for Mindfulness and Motivation</h2>
-        <section className={styles.catalogue}>
-          <article>
-            <h3>Title</h3>
-            <img src="Stoicism.png" className={styles.articleImage} />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id
-              lectus felis. Pellentesque efficitur pharetra sagittis
-            </p>
-          </article>
+          <Article
+            title="Morality & Empathy: What we can learn from Aristotle"
+            src="images/Stoicism.png"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+              id lectus felis. Pellentesque efficitur pharetra sagittis"
+          />
 
-          <article>
-            <h3>Title</h3>
-            <img src="Stoicism.png" className={styles.articleImage} />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id
-              lectus felis. Pellentesque efficitur pharetra sagittis
-            </p>
-          </article>
+          <Article
+            title="Yin & Yang - finding balance"
+            src="images/Stoicism.png"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+              id lectus felis. Pellentesque efficitur pharetra sagittis"
+          />
 
-          <article>
-            <h3>Title</h3>
-            <img src="Stoicism.png" className={styles.articleImage} />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id
-              lectus felis. Pellentesque efficitur pharetra sagittis
-            </p>
-          </article>
+          <Article
+            title="Stoicism & The Art of Courage"
+            src="images/Stoicism.png"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+              id lectus felis. Pellentesque efficitur pharetra sagittis"
+          />
         </section>
       </main>
     </div>
