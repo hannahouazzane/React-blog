@@ -19,7 +19,7 @@ a.login:active {
 
 .pageLayout {
   padding: 1.5rem;
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -78,7 +78,7 @@ div.firstName {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
 
   /* Set a specific height */
-  max-width: 1024px;
+  max-width: 800px;
   max-height: 576px;
   min-width: 512px;
   min-height: 400px;

@@ -1,0 +1,19 @@
+{
+  "articles": {
+    "article_one": {
+      "title": "Athens",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proinid lectus felis. Pellentesque efficitur pharetra sagittis",
+      "image": "images/Stoicism.png"
+    },
+    "article_two": {
+      "title": "Sparta",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proinid lectus felis. Pellentesque efficitur pharetra sagittis",
+      "image": "images/Stoicism.png"
+    },
+    "article_three": {
+      "title": "Troy",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proinid lectus felis. Pellentesque efficitur pharetra sagittis",
+      "image": "images/Stoicism.png"
+    }
+  }
+}

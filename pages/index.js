@@ -1,8 +1,11 @@
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Article from "./components/Article.js";
-
+import Test from "./api/test.json";
+import data from "./api/data.json";
 export const Home = () => {
+  console.log(data);
+
   return (
     <div className={styles.pageLayout}>
       <header>
@@ -35,32 +38,32 @@ export const Home = () => {
         </a>
       </header>
       <main>
-        <div className={styles.heroImage}>
-          <img
-            className={styles.week_quote}
-            src="images/weekly_quote.png"
-            height="500px"
-            width="1000px"
-          />
-        </div>
+        {/* <div className={styles.heroImage}> */}
+        <img
+          className={styles.week_quote}
+          src="images/weekly_quote.png"
+          height="500px"
+          width="100%"
+        />
+        {/* </div> */}
         <br />
 
         <h2>Recent Blog Posts</h2>
+        <p>
+          {Test.name} : {Test.description}{" "}
+        </p>
         <section className={styles.catalogue}>
           <Article
-            title="Morality & Empathy: What we can learn from Aristotle"
-            src="images/Stoicism.png"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              id lectus felis. Pellentesque efficitur pharetra sagittis"
+            title={data.articles.article_one.title}
+            src={data.articles.article_one.image}
+            description={data.articles.article_one.description}
           />
-
           <Article
             title="Yin & Yang - finding balance"
             src="images/Stoicism.png"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
               id lectus felis. Pellentesque efficitur pharetra sagittis"
           />
-
           <Article
             title="Stoicism & The Art of Courage"
             src="images/Stoicism.png"
