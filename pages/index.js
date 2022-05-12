@@ -1,10 +1,16 @@
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Article from "./components/Article.js";
-import Test from "./api/test.json";
-import data from "./api/data.json";
-export const Home = () => {
-  console.log(data);
+
+export async function getStaticProps({ params }) {
+  const res = await fetch("http://localhost:3000/api/hello");
+  const articles = await res.json();
+  return {
+    props: { articles },
+  };
+}
+export const Home = (props) => {
+  console.log("props:", props.articles);
 
   return (
     <div className={styles.pageLayout}>
@@ -49,27 +55,19 @@ export const Home = () => {
         <br />
 
         <h2>Recent Blog Posts</h2>
-        <p>
-          {Test.name} : {Test.description}{" "}
-        </p>
+
         <section className={styles.catalogue}>
-          <Article
-            title={data.articles.article_one.title}
-            src={data.articles.article_one.image}
-            description={data.articles.article_one.description}
-          />
-          <Article
-            title="Yin & Yang - finding balance"
-            src="images/Stoicism.png"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              id lectus felis. Pellentesque efficitur pharetra sagittis"
-          />
-          <Article
-            title="Stoicism & The Art of Courage"
-            src="images/Stoicism.png"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              id lectus felis. Pellentesque efficitur pharetra sagittis"
-          />
+          {Object.keys(props.articles).map((key, i) => {
+            /*Do fancy stuff in here */
+            return (
+              <Article
+                key={i}
+                title={props.articles[key].title}
+                src={props.articles[key].image}
+                description={props.articles[key].description}
+              />
+            );
+          })}
         </section>
 
         <h2>Latest Videos</h2>
