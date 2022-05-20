@@ -110,3 +110,20 @@ div.firstName {
     margin: 0;
   }
 }
+
+.newArticleForm {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 150vh;
+  justify-content: center;
+  padding: 1rem;
+  width: 100%;
+}
+.newArticleForm input {
+  margin: 5px;
+}
+.newArticleForm button {
+  margin: 5px;
+  padding: 5px;
+}

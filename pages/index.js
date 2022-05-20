@@ -39,9 +39,9 @@ export const Home = (props) => {
             </li>
           </ul>
         </nav>
-        <a href="signup.html" className={styles.login}>
-          Log in
-        </a>
+        <Link href="/login">
+          <a>Log in</a>
+        </Link>
       </header>
       <main>
         {/* <div className={styles.heroImage}> */}
