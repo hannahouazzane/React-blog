@@ -9,8 +9,8 @@ export async function getStaticProps({ params }) {
     props: { articles },
   };
 }
-export const Home = (props) => {
-  console.log("props:", props.articles);
+export const Home = ({ articles }) => {
+  console.log("props:", articles);
 
   return (
     <div className={styles.pageLayout}>
@@ -57,42 +57,17 @@ export const Home = (props) => {
         <h2>Recent Blog Posts</h2>
 
         <section className={styles.catalogue}>
-          {Object.keys(props.articles).map((key, i) => {
+          {Object.keys(articles).map((key, i) => {
             /*Do fancy stuff in here */
             return (
               <Article
                 key={i}
-                title={props.articles[key].title}
-                src={props.articles[key].image}
-                description={props.articles[key].description}
+                title={articles[key].title}
+                src={articles[key].image}
+                description={articles[key].description}
               />
             );
           })}
-        </section>
-
-        <h2>Latest Videos</h2>
-
-        <section className={styles.catalogue}>
-          <Article
-            title="Morality & Empathy: What we can learn from Aristotle"
-            src="images/Stoicism.png"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              id lectus felis. Pellentesque efficitur pharetra sagittis"
-          />
-
-          <Article
-            title="Yin & Yang - finding balance"
-            src="images/Stoicism.png"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              id lectus felis. Pellentesque efficitur pharetra sagittis"
-          />
-
-          <Article
-            title="Stoicism & The Art of Courage"
-            src="images/Stoicism.png"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              id lectus felis. Pellentesque efficitur pharetra sagittis"
-          />
         </section>
       </main>
     </div>
