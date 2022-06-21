@@ -11,6 +11,12 @@ export async function getStaticProps({ params }) {
 }
 export const Home = ({ articles }) => {
   console.log("props:", articles);
+  for(let i=0; i<< articles.length;i++){
+
+    if(articles[i].tag = "A"){
+      console.log("YAY")
+    }
+  }
 
   return (
     <div className={styles.pageLayout}>
@@ -55,6 +61,24 @@ export const Home = ({ articles }) => {
         <br />
 
         <h2>Recent Blog Posts</h2>
+
+
+        <section className={styles.catalogue}>
+         
+        
+         
+         
+    
+        </section>
+
+
+
+
+
+
+
+
+
 
         <section className={styles.catalogue}>
           {Object.keys(articles).map((key, i) => {
